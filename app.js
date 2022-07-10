@@ -11,7 +11,7 @@ const main = async () => {
 
     do {
         opt = await showMenu();
-        await pause();
+        if (opt !== '0') await pause();
     } while (opt !== '0');
 
 
