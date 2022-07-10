@@ -1,13 +1,21 @@
 const { mostrarMenu } = require('./helpers/mensajes');
 
 require('colors');
-let { showMenu } = require('./helpers/mensajes');
+let { showMenu, pause } = require('./helpers/mensajes');
 
 console.clear();
 
 const main = async () => {
     console.log('Hola Mundo');
-    showMenu();
+    let opt = '';
+
+    do {
+        opt = await showMenu();
+        await pause();
+    } while (opt !== '0');
+
+
+    // pause();
 }
 
 
